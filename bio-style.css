@@ -1,0 +1,134 @@
+.title {
+    
+    font-size: xx-large;
+    font-weight: 700;
+    place-self: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+.bio-text{
+    width: 50%;
+    place-self: center;
+    font-size:x-large;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+
+
+
+/*SLIDESHOW*/
+
+/* Container */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  height: 350px;
+  align-content: center;
+  display: inline-flex;
+  
+}
+
+/* Carousel */
+.carousel {
+  display: inline-flex;
+  transition: transform 0.5s ease-in-out;
+  place-self: center;
+}
+
+/* Slide */
+.carousel-slide {
+  flex: 0 0 100%; /* Each slide takes 100% of the container width */
+  display: grid;
+}
+
+.carousel-slide>img {
+  place-self: center;
+  width: 75%;
+  height: 280px;
+  display: block;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.carousel-slide>img:hover {
+  transform: scale(1.1);  
+}
+
+/* Navigation Buttons */
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+button.prev {
+  left: 0px;
+}
+
+button.next {
+  right: 0px;
+}
+
+
+
+@media (max-width: 992px) {
+  button.prev, button.next {
+   
+    top: 95%;
+    
+  }
+
+  .carousel-container{
+    
+    height: 380px;
+    width: 300px;
+  }
+
+  .carousel-slide>img {
+    
+    width: 90%;
+   
+  }
+
+
+}
+
+
+@media (max-width: 450px) {
+ 
+
+  .carousel-container{
+    
+    place-self: left;
+   
+  
+  }
+
+  button.prev {
+    left: 80px;
+  }
+  
+  button.next {
+    right: 80px;
+  }
+  
+ 
+
+
+}
